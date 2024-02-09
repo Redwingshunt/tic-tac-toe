@@ -28,9 +28,14 @@ def tic_tac_toe():
     player = 'X'
 
     while True:
+        ask = True
         print_board(board)
-        row = int(input(f"Player {player}, choose row (0, 1, 2): "))
-        col = int(input(f"Player {player}, choose column (0, 1, 2): "))
+        while ask: #will be asking till the row and col values are  from 0 to 2
+            print(" please choose something from '0'|'1'|'2'")
+            row = int(input(f"Player {player}, choose row (0, 1, 2): "))
+            col = int(input(f"Player {player}, choose column (0, 1, 2): "))
+            if row <=2 and col <=2:
+                ask = False    # exiting out of
 
         if board[row][col] == ' ':
             board[row][col] = player

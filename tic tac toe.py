@@ -7,7 +7,6 @@ def check_winner(board):
     # Check rows
     for row in board:
         if row[0] == row[1] == row[2] != ' ':
-            print(f"row 0 :{row[0]}, row 1:  {row[1]}, row 2:3{row[2]}")
             return True
         
 
